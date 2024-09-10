@@ -1,0 +1,38 @@
+package vectorpares;
+
+import java.util.Scanner;
+
+
+public class VectorPares {
+
+     public static void main(String[] args) {
+        Scanner escn = new Scanner(System.in);
+        
+        // Aquí se pone el tamaño del vector
+        System.out.print("Por favor ingrese el tamaño del vector: ");
+        int n = escn.nextInt();
+        
+        // se crea y se llena el vector
+        int[] vector = new int[n];
+        System.out.println("Por favor ingrese un numero:");
+        for (int i = 0; i < n; i++) {
+            vector[i] = escn.nextInt();
+        }
+        
+        // se llama al metodo para dar el numero de pares y se imprime
+        int resultado = sumPair(vector);
+        System.out.println("El número de pares del arreglo es: " + resultado);
+    }
+
+    public static int sumPair(int[] v) {
+        int result = 0;
+        for (int i = 0; i < v.length; i++) {
+            for (int j = i + 1; j < v.length; j++) {
+                if ((v[i] + v[j]) % 2 == 0) {
+                    result++;
+                }
+            }
+        }
+        return result;
+    }
+}
