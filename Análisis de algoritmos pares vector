@@ -21,7 +21,7 @@ public class VectorPares {
         
         // se llama al metodo para dar el numero de pares y se imprime
         int resultado = sumPair(vector);
-        System.out.println("El número de pares del arreglo es: " + resultado);
+        System.out.println("El número de pares (i, j) que cumplen la condición es:" + resultado);
     }
 
     public static int sumPair(int[] v) {
